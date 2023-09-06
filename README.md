@@ -1,4 +1,4 @@
-# My solutions on Codeforces website <a href="https://codeforces.com/"><img src="cf.png" alt="vscode" width="200" height="40"></a>
+# My solutions on Codeforces website <a href="https://codeforces.com/" target="_blank" rel="noopener noreferrer"><img src="cf.png" alt="vscode" width="200" height="40"></a>
 
 [![code formatter Badge](https://img.shields.io/badge/Code%20Style-autopep8-blue?logo=python&logoColor=white)](https://github.com/microsoft/vscode-autopep8)
 [![linter Badge](https://img.shields.io/badge/Linter-flake8-yellow?logo=python&logoColor=white)](https://github.com/microsoft/vscode-flake8)
