@@ -17,7 +17,7 @@ https://codeforces.com/problemset/problem/ [NUMBER] / [LETTER]
 
 for example:
 <br>
-[https://codeforces.com/problemset/problem/4/A](https://codeforces.com/problemset/problem/4/A)
+https://codeforces.com/problemset/problem/4/A
 <br>
 (This was the first question that I solved with great enthusiasm using the C++ language 😍)
 
@@ -28,7 +28,7 @@ for example:
 
 **Different languages and methods of solution (unless mentioned in the question) are accepted**
 
-There are also addresses and other communication methods in this [link] (https://github.com/AliBinary).
+There are also addresses and other communication methods in this [link](https://github.com/AliBinary).
 
 ***
 
