@@ -8,57 +8,79 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-#define vi vector<int>
+using lli = long long int;
+using ld = long double;
+using pii = pair<lli, lli>;
+using vii = vector<pii>;
+using vi = vector<lli>;
 
 int main()
 {
-    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int t;
     cin >> t;
     while (t--)
     {
-        int n, m, k, cnt_a = 0, cnt_b = 0;
+        int n, m, k;
         cin >> n >> m >> k;
-        bool A[k] = {}, B[k] = {};
+        vector<bool> A(k);
+        vector<bool> B(k);
 
         for (int i = 0; i < n; i++)
         {
-            int x;
+            lli x;
             cin >> x;
-            if (x <= k && A[x - 1] == 0)
+            if (x > k)
             {
-                A[x - 1] = 1;
-                cnt_a++;
+                continue;
             }
+            x--;
+            A[x] = true;
         }
         for (int i = 0; i < m; i++)
         {
-            int x;
+            lli x;
             cin >> x;
-            if (x <= k && B[x - 1] == 0)
+            if (x > k)
             {
-                B[x - 1] = 1;
-                cnt_b++;
+                continue;
+            }
+            x--;
+            B[x] = true;
+        }
+
+        bool possible = true;
+        lli cA = 0, cB = 0;
+        for (int i = 0; i < k; i++)
+        {
+            if (A[i] || B[i])
+            {
+                continue;
+            }
+            possible = false;
+            break;
+        }
+        for (int i = 0; i < k; i++)
+        {
+            if (A[i] && B[i] == false)
+            {
+                cA++;
+            }
+            if (A[i] == false && B[i])
+            {
+                cB++;
             }
         }
-        bool ans = true;
-        if (cnt_a < (k / 2) || cnt_b < (k / 2))
-            ans = false;
-        else
-            for (int i = 0; i < k; i++)
-            {
-                if (!A[i] && !B[i])
-                {
-                    ans = false;
-                    break;
-                }
-            }
-
-        if (ans)
+        if (cA > k / 2)
+            possible = false;
+        if (cB > k / 2)
+            possible = false;
+        if (possible)
             cout << "YES\n";
         else
             cout << "NO\n";
     }
+    return 0;
 }
