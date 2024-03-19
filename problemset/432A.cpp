@@ -2,7 +2,7 @@
     author:  Ali
     Email: AliGhanbariCs@gmail.com
     GitHub: https://github.com/AliBinary
-    created: 20.03.2024 02:00:21
+    created: 20.03.2024 02:02:00
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -103,10 +103,20 @@ int main()
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
 
-    cout << pct(n);
+    int ans = 0;
+    rep(n)
+    {
+        int x;
+        cin >> x;
+
+        if (x <= (5 - k))
+            ans++;
+    }
+
+    cout << fdiv(ans, 3);
 }
 
 /* stuff you should look for

@@ -2,7 +2,7 @@
     author:  Ali
     Email: AliGhanbariCs@gmail.com
     GitHub: https://github.com/AliBinary
-    created: 20.03.2024 02:00:21
+    created: 20.03.2024 01:22:21
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -92,7 +92,7 @@ int main()
 {
     fast_io;
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--)
     {
         solve();
@@ -103,10 +103,12 @@ int main()
 
 void solve()
 {
-    int n;
+    ll n;
     cin >> n;
 
-    cout << pct(n);
+    if ((n & (n - 1)) == 0)
+        kill("NO");
+    kill("YES");
 }
 
 /* stuff you should look for

@@ -2,7 +2,7 @@
     author:  Ali
     Email: AliGhanbariCs@gmail.com
     GitHub: https://github.com/AliBinary
-    created: 20.03.2024 02:00:21
+    created: 20.03.2024 01:44:01
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -106,7 +106,36 @@ void solve()
     int n;
     cin >> n;
 
-    cout << pct(n);
+    V<int> nof1;
+    V<int> nof2;
+    V<int> nof3;
+
+    FOR(i, 1, n + 1)
+    {
+        int x;
+        cin >> x;
+        if (x == 1)
+            nof1.pb(i);
+        else if (x == 2)
+            nof2.pb(i);
+        else
+            nof3.pb(i);
+    }
+
+    int ans = min(sz(nof1), sz(nof2));
+    ans = min(ans, sz(nof3));
+    if (ans)
+    {
+        cout << ans << endl;
+        FOR(i, 0, ans)
+        {
+            cout << nof1[i] << sep << nof2[i] << sep << nof3[i] << endl;
+        }
+    }
+    else
+    {
+        cout << 0;
+    }
 }
 
 /* stuff you should look for
