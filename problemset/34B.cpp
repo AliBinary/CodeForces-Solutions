@@ -2,7 +2,7 @@
     author:  Ali
     Email: AliGhanbariCs@gmail.com
     GitHub: https://github.com/AliBinary
-    created: 29.06.2024 09:29:08
+    created: 29.06.2024 10:27:35
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -100,7 +100,7 @@ int main()
     fast_io;
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();
@@ -111,11 +111,23 @@ int main()
 
 void solve()
 {
-    str s1;
-    cin >> s1;
-    if (s1[0] == 'a' || s1[1] == 'b' || s1[2] == 'c')
-        kill("YES");
-    kill("NO");
+    int m, n;
+    cin >> n >> m;
+    V<int> a(n);
+    each(x, a)
+    {
+        cin >> x;
+    }
+    sor(a);
+    ll ans = 0;
+    FOR(i, 0, m)
+    {
+        int x = a[i];
+        if (x < 0)
+            ans += x;
+    }
+    ans *= -1;
+    cout << ans << endl;
 }
 
 /* stuff you should look for
