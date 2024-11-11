@@ -50,7 +50,7 @@ tcT > int upb(V<T> &a, const T &b) { return int(ub(all(a), b) - bg(a)); }
 // loops
 #define FOR(i, a, b) for (int i = (a); i < (b); ++i)
 #define F0R(i, b) FOR(i, 0, b)
-#define ROF(i, a, b) for (int i = (b)-1; i >= (a); --i)
+#define ROF(i, a, b) for (int i = (b) - 1; i >= (a); --i)
 #define R0F(i, b) ROF(i, 0, b)
 #define rep(n) FOR(_, 0, n)
 #define each(x, a) for (auto &x : a)
